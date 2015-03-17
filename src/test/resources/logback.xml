@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- See http://logback.qos.ch/manual/layouts.html -->
+            <!-- See http://doc.akka.io/docs/akka/2.0/scala/logging.html -->
+            <pattern>%-5level [%file:%line] %logger{36} %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="dispatch" level="error"/>
+    <logger name="akka.dispatcher" level="OFF"/>
+    <logger name="akka" level="OFF"/>
+    <logger name="org.apache.http.headers" level="OFF"/>
+    <logger name="akka.actor" level="OFF"/>
+
+    <logger name="com.meltwater.slf.hagar" level="error" additivity="true"/>
+
+    <root level="OFF">
+        <!-- <appender-ref ref="CONSOLE"/> -->
+    </root>
+
+</configuration>
